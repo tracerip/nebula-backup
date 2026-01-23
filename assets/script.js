@@ -126,6 +126,17 @@ const library = [
                 }
             }
         ]
+    },
+    { 
+        id: "terraria", 
+        title: "Terraria (WASM-GC)", 
+        description: "An exciting online puzzle game with drag-and-drop Tetris block gameplay.", 
+        icon: "thumbnail.jpg",
+        creator: {
+            name: "Mercury Workshop",
+            link: "https://terraria.mercurywork.shop/",
+            icon: "fa-solid fa-globe"
+        }
     }
 ];
 
