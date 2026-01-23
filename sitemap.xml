@@ -37,6 +37,18 @@
         <changefreq>monthly</changefreq>
     </url>
     <url>
+        <loc>https://nebula.trace.rip/play?game=eaglercraft-eaglercraft-indev-20100223</loc>
+        <lastmod>2025-01-23</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://nebula.trace.rip/play?game=eaglercraft-eaglercraft-indev-20100223-wasm</loc>
+        <lastmod>2025-01-23</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
         <loc>https://nebula.trace.rip/play?game=eaglercraft-classic-0.30</loc>
         <lastmod>2025-01-23</lastmod>
         <priority>0.8</priority>
