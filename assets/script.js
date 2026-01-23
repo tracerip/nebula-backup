@@ -130,7 +130,7 @@ const library = [
     { 
         id: "terraria", 
         title: "Terraria (WASM-GC)", 
-        description: "An exciting online puzzle game with drag-and-drop Tetris block gameplay.", 
+        description: "A 2D sandbox action-adventure game developed by [Re-Logic](https://re-logic.com/). Often described as 2D Minecraft.", 
         icon: "thumbnail.jpg",
         creator: {
             name: "Mercury Workshop",
