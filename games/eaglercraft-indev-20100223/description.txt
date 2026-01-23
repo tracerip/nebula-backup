@@ -1,0 +1,25 @@
+# Description
+[Minecraft Indev 20100223](https://minecraft.wiki/w/Java_Edition_Indev_20100223) is a historic development build released on February 23, 2010, by [Notch (Markus Persson)](https://minecraft.wiki/w/Notch). This version introduced paintings and refined the early survival experience. Indev marked a major evolution from Classic, adding crafting, smelting, tools, weapons, torches, chests, and a full day/night cycle with hostile mobs. Players spawn on a finite floating island world and must gather resources to survive against zombies, skeletons, creepers, and spiders.
+
+Looking for better performance?
+We offer an experimental [WASM Version](play?game=eaglercraft-indev-20100223-wasm) of this game. It runs faster on some devices but may not be supported by all browsers.
+
+For a more complete survival experience with infinite worlds, try [Minecraft 1.5.2](play?game=eaglercraft-1.5.2) or [Minecraft 1.8.8](play?game=eaglercraftx-1.8.8).
+
+For a more older and classic survival version, try [Minecraft Classic 0.30](player?game=eaglercraft-classic-0.30).
+
+# Controls
+Left Click - Attack/mine blocks.
+Right Click - Place blocks/use items.
+WASD - Move forward, left, backward, right.
+Space - Jump.
+I - Open inventory and crafting menu.
+1-9 - Select hotbar slot.
+Scroll Wheel - Cycle through hotbar items.
+Q - Drop held item.
+C - Zoom into farter places.
+/ - Open the chat for commands.
+` - Escape menu to show all options.
+
+# Hidden SEO
+minecraft indev, minecraft indev 20100223, minecraft indev download, minecraft indev free, play minecraft indev, minecraft indev online, minecraft 2010, minecraft notch, minecraft early version, minecraft history, minecraft first crafting, minecraft first survival, minecraft indev paintings, minecraft floating island, minecraft finite world, minecraft legacy, minecraft retro, minecraft old version, minecraft classic survival, minecraft browser game, minecraft free to play, minecraft indev mobs, minecraft indev crafting, minecraft indev tools, minecraft nostalgia, minecraft beginning, minecraft development history, minecraft indev unblocked, minecraft web game, play minecraft free

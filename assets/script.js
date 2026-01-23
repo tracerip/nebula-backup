@@ -14,30 +14,30 @@ const library = [
     {
         type: "group",
         title: "Minecraft Collection",
-        description: "All Eaglercraft versions (1.5.2, 1.8.8, 1.12.2).",
+        description: "All Eaglercraft versions (1.5.2, 1.8.8, 1.12.2, etc).",
         icon: "🪓",
         items: [
             { 
                 id: "eaglercraft-1.12.2", 
-                title: "Minecraft 1.12.2 (JS) (Recommended)", 
+                title: "Minecraft 1.12.2 (JS)", 
                 description: "1.12, the release of the [World of Color Update](https://minecraft.wiki/w/World_of_Color_Update), released on June 7, 2017.", 
                 icon: "thumbnail.png"
             },
             { 
                 id: "eaglercraft-1.12.2-wasm", 
-                title: "Minecraft 1.12.2 (WASM-GC) (Experimental)", 
+                title: "Minecraft 1.12.2 (WASM-GC)", 
                 description: "1.12, the release of the [World of Color Update](https://minecraft.wiki/w/World_of_Color_Update), released on June 7, 2017.", 
                 icon: "thumbnail.png"
             },
             { 
                 id: "eaglercraftx-1.8.8", 
-                title: "Minecraft 1.8.8 (JS) (Recommended)", 
+                title: "Minecraft 1.8.8 (JS)", 
                 description: "1.8, the release of the [Bountiful Update](https://minecraft.wiki/w/Bountiful_Update) released on September 2, 2014.", 
                 icon: "thumbnail.png"
             },
             { 
                 id: "eaglercraftx-1.8.8-wasm", 
-                title: "Minecraft 1.8.8 (WASM-GC) (Experimental)", 
+                title: "Minecraft 1.8.8 (WASM-GC)", 
                 description: "1.8, the release of the [Bountiful Update](https://minecraft.wiki/w/Bountiful_Update) released on September 2, 2014.", 
                 icon: "thumbnail.png"
             },
@@ -45,6 +45,18 @@ const library = [
                 id: "eaglercraft-1.5.2", 
                 title: "Minecraft 1.5.2 (JS)", 
                 description: "1.5, the release of the [Redstone Update](https://minecraft.wiki/w/Redstone_Update), released on March 13, 2013.", 
+                icon: "thumbnail.png"
+            },
+            { 
+                id: "eaglercraft-indev-20100223", 
+                title: "Minecraft Indev 20100223 (JS)", 
+                description: "Indev 20100223, the version that introduced [paintings](https://minecraft.wiki/w/Java_Edition_Indev_20100223), released on February 23, 2010.", 
+                icon: "thumbnail.png"
+            },
+            { 
+                id: "eaglercraft-indev-20100223-wasm", 
+                title: "Minecraft Indev 20100223 (WASM-GC)", 
+                description: "Indev 20100223, the version that introduced [paintings](https://minecraft.wiki/w/Java_Edition_Indev_20100223), released on February 23, 2010.", 
                 icon: "thumbnail.png"
             },
             { 
