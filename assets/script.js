@@ -21,7 +21,7 @@ const library = [
                 description: "1.12, the release of the [World of Color Update](https://minecraft.wiki/w/World_of_Color_Update), released on June 7, 2017.", 
                 icon: "thumbnail.png",
                 creator: {
-                    name: "PeytonPlayz585",
+                    name: "PeytonPlayz595",
                     link: "https://discord.gg/nmKB4KRUMy",
                     icon: "fa-brands fa-discord"
                 }
@@ -32,7 +32,7 @@ const library = [
                 description: "1.12, the release of the [World of Color Update](https://minecraft.wiki/w/World_of_Color_Update), released on June 7, 2017.", 
                 icon: "thumbnail.png",
                 creator: {
-                    name: "PeytonPlayz585",
+                    name: "PeytonPlayz595",
                     link: "https://discord.gg/nmKB4KRUMy",
                     icon: "fa-brands fa-discord"
                 }
@@ -71,6 +71,28 @@ const library = [
                 }
             },
             { 
+                id: "eaglercraft-alpha-1.2.6", 
+                title: "Minecraft Alpha 1.2.6 (JS)", 
+                description: "The final alpha bug-fix release of the legendary sandbox survival game developed by [Mojang Studios](https://minecraft.wiki/w/Mojang_Studios).", 
+                icon: "thumbnail.png",
+                creator: {
+                    name: "Colbster937",
+                    link: "https://github.com/EaglerPorts/a1.2.6",
+                    icon: "fa-brands fa-github"
+                }
+            },
+            { 
+                id: "eaglercraft-alpha-1.2.6-wasm", 
+                title: "Minecraft Alpha 1.2.6 (WASM-GC)", 
+                description: "The final alpha bug-fix release of the legendary sandbox survival game developed by [Mojang Studios](https://minecraft.wiki/w/Mojang_Studios).", 
+                icon: "thumbnail.png",
+                creator: {
+                    name: "Colbster937",
+                    link: "https://github.com/EaglerPorts/a1.2.6",
+                    icon: "fa-brands fa-github"
+                }
+            },
+            { 
                 id: "eaglercraft-indev-20100223", 
                 title: "Minecraft Indev 20100223 (JS)", 
                 description: "Indev 20100223, the version that introduced [paintings](https://minecraft.wiki/w/Java_Edition_Indev_20100223), released on February 23, 2010.", 
@@ -98,8 +120,8 @@ const library = [
                 description: "0.30, the version that introduced [Survival Mode](https://minecraft.wiki/w/Java_Edition_Classic_0.30), released on November 10, 2009.", 
                 icon: "thumbnail.png",
                 creator: {
-                    name: "PeytonPlayz585",
-                    link: "https://github.com/PeytonPlayz585",
+                    name: "PeytonPlayz595",
+                    link: "https://github.com/PeytonPlayz595",
                     icon: "fa-brands fa-github"
                 }
             }
