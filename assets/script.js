@@ -235,6 +235,17 @@ const library = [
         ]
     },
     { 
+        id: "polytrack", 
+        title: "PolyTrack", 
+        description: "A thrilling low-poly racing game heavily inspired by TrackMania, featuring insane loops, jumps, high-speed drifts, and precision driving where every millisecond counts.", 
+        icon: "thumbnail.png",
+        creator: {
+            name: "Kodub",
+            link: "https://kodub.itch.io/polytrack",
+            icon: "fa-brands fa-itch-io"
+        }
+    },
+    { 
         id: "slope", 
         title: "Slope", 
         description: "The ultimate 3D speed run game where you play as a ball dodging red walls going down a slope.", 
