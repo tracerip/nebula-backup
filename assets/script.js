@@ -12,8 +12,8 @@ const library = [
         {
         type: "group",
         title: "Minecraft Collection",
-        description: "All Eaglercraft versions (1.5.2, 1.8.8, 1.12.2, etc).",
-        icon: "🪓",
+        description: "All Eaglercraft versions (Classic 0.30, 1.5.2, 1.8.8, 1.12.2, etc).",
+        icon: "mc-thumbnail.jpg",
         items: [
             { 
                 id: "eaglercraft-1.12.2", 
@@ -108,8 +108,8 @@ const library = [
     {
         type: "group",
         title: "FNaF Collection",
-        description: "All FNaF versions (1, 2, 3, 4, etc).",
-        icon: "🐻",
+        description: "All FNaF versions (1, 2, 3, 4, Ultimate Custom Night, etc).",
+        icon: "fnaf-thumbnail.jpg",
         items: [
             { 
                 id: "fnaf", 
@@ -190,8 +190,8 @@ const library = [
             },
             {
                 id: "fnaf-ucn", 
-                title: "Five Nights at Freddy's 4: Halloween Edition", 
-                description: "The spine-chilling Halloween-themed edition of [FNaF 4](play?game=fnaf-4), swapping the normal animatronics with horrifying Halloween-themed animatronics.", 
+                title: "Ultimate Custom Night", 
+                description: "Survive 20/20 mode with 50 selectable animatronics from the FNaF series, managing doors, lights, cameras, global music box, heater, power A/C, and unique mechanics like Dee Dee summons.", 
                 icon: "thumbnail.jpg",
                 creator: {
                     name: "genizy",
@@ -200,9 +200,9 @@ const library = [
                 }
             },
             {
-                id: "fnaf-world", 
-                title: "FNaF World", 
-                description: "A quirky chibi-style RPG adventure starring over 48 recruitable animatronics exploring a colorful overworld.", 
+                id: "fnaf-world",
+                title: "FNaF World",
+                description: "A quirky chibi-style RPG adventure starring over 48 recruitable animatronics exploring a colorful overworld.",
                 icon: "thumbnail.jpg",
                 creator: {
                     name: "genizy",
@@ -280,9 +280,9 @@ const library = [
     },
     { 
         id: "repo", 
-        title: "R.E.P.O.", 
+        title: "R.E.P.O.",
         description: "A chaotic online co-op horror game for up to 6 players featuring realistic physics, proximity voice chat, and terrifying monsters.", 
-        icon: "thumbnail.webp",
+        icon: "thumbnail.jpg",
         creator: {
             name: "98Corbins",
             link: "https://itch.io/profile/98corbins/",
