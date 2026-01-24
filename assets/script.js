@@ -159,6 +159,17 @@ const library = [
             link: "https://github.com/SnubbyOWO/Mario64Offline",
             icon: "fa-brands fa-github"
         }
+    },
+    { 
+        id: "schoolboy-runaway", 
+        title: "SchoolBoy Runaway", 
+        description: "A 3D action-adventure platform game released for the N64.", 
+        icon: "thumbnail.jpg",
+        creator: {
+            name: "gn-math",
+            link: "https://gn-math.dev/",
+            icon: "fa-solid fa-globe"
+        }
     }
 ];
 
