@@ -245,6 +245,39 @@ const library = [
             icon: "fa-brands fa-github"
         }
     },
+    { 
+        id: "slope-plus", 
+        title: "Slope Plus", 
+        description: "A modded version of the addictive endless runner [Slope](play?game=slope), packed with extra features like seeded runs for replayable maps, custom games to load maps and set starting speeds.", 
+        icon: "thumbnail.jpg",
+        creator: {
+            name: "coweggs",
+            link: "https://coweggs.itch.io/slope-plus",
+            icon: "fa-brands fa-itch-io"
+        }
+    },
+    { 
+        id: "pentablocks", 
+        title: "Pentablocks", 
+        description: "Maneuver your dot with precise WASD controls through endless barrages of red obstacles in a black void.", 
+        icon: "thumbnail.png",
+        creator: {
+            name: "coweggs",
+            link: "https://coweggs.itch.io/pentablocks",
+            icon: "fa-brands fa-itch-io"
+        }
+    },
+    { 
+        id: "minesweeper-variation", 
+        title: "Minesweeper Variation", 
+        description: "A tense twist on classic [Minesweeper](play?game=minesweeper) where every 10 seconds, 3 of your moves get mysteriously reverted, forcing constant adaptation.", 
+        icon: "thumbnail.png",
+        creator: {
+            name: "coweggs",
+            link: "https://coweggs.itch.io/minesweeper-variation",
+            icon: "fa-brands fa-itch-io"
+        }
+    },
     {
         id: "buckshot-roulette",
         title: "Buckshot Roulette",
