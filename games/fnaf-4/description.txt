@@ -1,7 +1,7 @@
 # Description
 [FNaF 4](https://store.steampowered.com/app/388090/Five_Nights_at_Freddys_4/) ([Wikipedia](https://en.wikipedia.org/wiki/Five_Nights_at_Freddy%27s_4)) shifts to pure nightmare fuel in a child's bedroom. Listen for breath sounds to flash the closet and hallway, wind the music box via flashlight, and fend off Nightmare Fredbear, Foxy, and others in close-quarters terror. No cameras—just audio cues, hallucinations, and escalating nights leading to the scariest challenges yet with profound lore ties.
 
-If you're looking for a different gaming experience, try [FNaF World](play?game=fnaf-world) or [FNaF Sister Location](play?game=fnaf-sl).
+If you're looking for a different gaming experience, try [FNaF 4 Halloween Edition](play?game=fnaf-4-halloween) or [FNaF Sister Location](play?game=fnaf-sl).
 
 # Controls
 Mouse - Shine flashlight (door / closet).

@@ -133,7 +133,7 @@ const library = [
                     icon: "fa-brands fa-github"
                 }
             },
-            { 
+            {
                 id: "fnaf-3", 
                 title: "Five Nights at Freddy's 3", 
                 description: "Maintain systems against malfunctioning vents, cameras, and audio lures while hallucination phantoms disrupt you and Springtrap hunts silently.", 
@@ -144,7 +144,7 @@ const library = [
                     icon: "fa-brands fa-github"
                 }
             },
-            { 
+            {
                 id: "fnaf-4", 
                 title: "Five Nights at Freddy's 4", 
                 description: "Pure nightmare fuel in a child's bedroom. Listen for breath sounds to flash the closet and hallway, wind the music box via flashlight, and fend off animatronics in close-quarters terror.", 
@@ -155,10 +155,54 @@ const library = [
                     icon: "fa-brands fa-github"
                 }
             },
-            { 
+            {
                 id: "fnaf-4-halloween", 
-                title: "Five Nights at Freddy's 4 Halloween", 
-                description: "Pure nightmare fuel in a child's bedroom. Listen for breath sounds to flash the closet and hallway, wind the music box via flashlight, and fend off animatronics in close-quarters terror.", 
+                title: "Five Nights at Freddy's 4: Halloween Edition", 
+                description: "The spine-chilling Halloween-themed edition of [FNaF 4](play?game=fnaf-4), swapping the normal animatronics with horrifying Halloween-themed animatronics.", 
+                icon: "thumbnail.jpg",
+                creator: {
+                    name: "genizy",
+                    link: "https://github.com/genizy/fnaf",
+                    icon: "fa-brands fa-github"
+                }
+            },
+            {
+                id: "fnaf-sl", 
+                title: "Five Nights at Freddy's: Sister Location", 
+                description: "Work at Circus Baby's Entertainment & Rental underground facility as a technician. Navigate Primary Control Office stations via hand-unit, defend against animatronics, play death minigames, and uncover horrifying plot across endings", 
+                icon: "thumbnail.jpg",
+                creator: {
+                    name: "genizy",
+                    link: "https://github.com/genizy/fnaf",
+                    icon: "fa-brands fa-github"
+                }
+            },
+            {
+                id: "fnaf-ps", 
+                title: "Freddy Fazbear's Pizzeria Simulator", 
+                description: "Build your dream pizzeria by day with risky animatronic purchases, then salvage and defend against nocturnal threats.", 
+                icon: "thumbnail.jpg",
+                creator: {
+                    name: "genizy",
+                    link: "https://github.com/genizy/fnaf",
+                    icon: "fa-brands fa-github"
+                }
+            },
+            {
+                id: "fnaf-ucn", 
+                title: "Five Nights at Freddy's 4: Halloween Edition", 
+                description: "The spine-chilling Halloween-themed edition of [FNaF 4](play?game=fnaf-4), swapping the normal animatronics with horrifying Halloween-themed animatronics.", 
+                icon: "thumbnail.jpg",
+                creator: {
+                    name: "genizy",
+                    link: "https://github.com/genizy/fnaf",
+                    icon: "fa-brands fa-github"
+                }
+            },
+            {
+                id: "fnaf-world", 
+                title: "FNaF World", 
+                description: "A quirky chibi-style RPG adventure starring over 48 recruitable animatronics exploring a colorful overworld.", 
                 icon: "thumbnail.jpg",
                 creator: {
                     name: "genizy",
