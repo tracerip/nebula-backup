@@ -245,7 +245,18 @@ const library = [
             icon: "fa-brands fa-github"
         }
     },
-    { 
+    {
+        id: "buckshot-roulette",
+        title: "Buckshot Roulette",
+        description: " Play Russian roulette with a 12-gauge shotgun. Four enter. One leaves. Roll the dice with your life. Good luck!",
+        icon: "thumbnail.jpg",
+        creator: {
+            name: "Mike Klubnika",
+            link: "https://mikeklubnika.itch.io/buckshot-roulette",
+            icon: "fa-brands fa-itch-io"
+        }
+    },
+    {
         id: "block-blast", 
         title: "Block Blast", 
         description: "An exciting online puzzle game with drag-and-drop Tetris block gameplay.", 

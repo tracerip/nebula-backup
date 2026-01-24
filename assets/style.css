@@ -93,6 +93,13 @@ nav {
 .card-content h3 { color: white; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
 .card-content p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.4; }
 
+.notice-box { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.2);
+    color: #fbbf24; padding: 0.8rem 1rem; border-radius: 8px;
+    font-size: 0.9rem; display: flex; align-items: center;
+    gap: 12px; width: 100%; }
+.notice-box i { font-size: 1.1rem; }
+.notice-box strong { font-weight: 700; }
+
 .play-container {
     margin-top: 100px;
     width: 100%;
