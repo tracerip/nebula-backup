@@ -279,6 +279,12 @@ const library = [
         }
     },
     { 
+        id: "minesweeper", 
+        title: "Minesweeper", 
+        description: "The timeless logic puzzle classic where you uncover a grid of hidden tiles, using numbers to deduce and flag mine locations without detonating any.", 
+        icon: "thumbnail.png"
+    },
+    { 
         id: "minesweeper-variation", 
         title: "Minesweeper Variation", 
         description: "A tense twist on classic [Minesweeper](play?game=minesweeper) where every 10 seconds, 3 of your moves get mysteriously reverted, forcing constant adaptation.", 
