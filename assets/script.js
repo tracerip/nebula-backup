@@ -382,6 +382,17 @@ const library = [
             link: "https://itch.io/profile/98corbins/",
             icon: "fa-brands fa-itch-io"
         }
+    },
+    { 
+        id: "thats-not-my-neighbor", 
+        title: "That's not my Neighbor", 
+        description: "A chilling 1955 apartment horror sim where you man the D.D.D. entrance as a door guard, scrutinizing residents via cameras, files, and photos to spot grotesque doppelgangers mimicking humans.", 
+        icon: "thumbnail.png",
+        creator: {
+            name: "Nachosama Games",
+            link: "https://store.steampowered.com/app/3431040/Thats_not_my_Neighbor/",
+            icon: "fa-brands fa-steam"
+        }
     }
 ];
 
