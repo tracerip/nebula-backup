@@ -129,6 +129,75 @@ const library = [
     },
     {
         type: "group",
+        title: "Geometry Dash Collection",
+        description: "All Geometry Dash versions including fan games. (Sub Zero, Lite, World, etc).",
+        icon: "gd-thumbnail.jpg",
+        items: [
+            {
+                id: "gd-lite",
+                title: "Geometry Dash Lite",
+                description: "The free starter edition of the iconic rhythm-based platformer with the first 13 levels.",
+                icon: "thumbnail.jpg",
+                creator: {
+                    name: "geometrydashlite.io",
+                    link: "https://geometrydashlite.io",
+                    icon: "fa-solid fa-globe"
+                }
+            },
+            {
+                id: "gd-world",
+                title: "Geometry Dash World",
+                description: "The mobile-exclusive rhythm platformer expansion with four mega-levels.",
+                icon: "thumbnail.webp",
+                creator: {
+                    name: "geometrydashlite.io",
+                    link: "https://geometrydashlite.io",
+                    icon: "fa-solid fa-globe"
+                }
+            },
+            {
+                id: "gd-subzero",
+                title: "Geometry Dash SubZero",
+                description: "The icy spin-off rhythm platformer packed with three exclusive mega-levels.",
+                icon: "thumbnail.webp",
+                creator: {
+                    name: "geometrydashlite.io",
+                    link: "https://geometrydashlite.io",
+                    icon: "fa-solid fa-globe"
+                }
+            },
+            {
+                id: "gd-breeze",
+                title: "Geometry Dash Breeze",
+                description: "A popular fan-made modification of the classic rhythm platformer that introduces exclusive levels, fresh icon sets, and vibrant visual effects.",
+                icon: "thumbnail.png",
+                creator: {
+                    name: "geometrydashlite.io",
+                    link: "https://geometrydashlite.io",
+                    icon: "fa-solid fa-globe"
+                }
+            },
+            {
+                id: "gd-vibes",
+                title: "Geometry Vibes",
+                description: "A vibrant fan-made rhythm platformer channeling Geometry Dash vibes with the wave gamemode.",
+                icon: "thumbnail.jpg",
+                creator: {
+                    name: "gameVgames",
+                    link: "https://www.gamevgames.com/game/geometry-vibes",
+                    icon: "fa-solid fa-globe"
+                }
+            },
+            {
+                id: "gj",
+                title: "Geometry Jump",
+                description: "The infamous, web-exclusive bootleg of the popular rhythm platformer, widely recognized as the school computer version.",
+                icon: "thumbnail.png"
+            }
+        ]
+    },
+    {
+        type: "group",
         title: "FNaF Collection",
         description: "All FNaF versions (1, 2, 3, 4, Ultimate Custom Night, etc).",
         icon: "fnaf-thumbnail.jpg",

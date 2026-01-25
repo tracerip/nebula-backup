@@ -113,6 +113,38 @@ Open `sitemap.xml` and add a new `<url>` block. Make sure to replace `game-id` w
 </url>
 ```
 
+If there are multiple versions of a game, like Geometry Dash or Eaglercraft, I generally bump the priority from 0.8 to 0.9 for the version that offers the best experience. Here is an example of how that looks in the code:
+
+```xml
+<url>
+    <loc>https://nebula.trace.rip/play?game=gd-lite</loc>
+    <lastmod>2025-01-24</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+</url>
+<url>
+    <loc>https://nebula.trace.rip/play?game=gd-vibes</loc>
+    <lastmod>2025-01-24</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+</url>
+```
+
+```xml
+<url>
+    <loc>https://nebula.trace.rip/play?game=eaglercraft-alpha-1.2.6</loc>
+    <lastmod>2025-01-24</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+</url>
+<url>
+    <loc>https://nebula.trace.rip/play?game=eaglercraft-alpha-1.2.6-wasm</loc>
+    <lastmod>2025-01-24</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+</url>
+```
+
 ---
 
 ## 🧪 Testing
