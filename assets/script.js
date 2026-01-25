@@ -506,6 +506,17 @@ const library = [
             link: "https://www.newgrounds.com/portal/view/228520",
             icon: "fa-solid fa-globe"
         }
+    },
+    { 
+        id: "hollow-knight", 
+        title: "Hollow Knight", 
+        description: "A critically acclaimed 2D Metroidvania that invites you to explore the twisting caverns of a ruined kingdom called Hallownest.", 
+        icon: "thumbnail.jpg",
+        creator: {
+            name: "bog",
+            link: "https://github.com/aukak/hollow-knight",
+            icon: "fa-brands fa-github"
+        }
     }
 ];
 
