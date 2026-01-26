@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Nebula | Theater</title>
+    
+    <meta name="description" content="Play any movie or tv show on Nebula.">
+    <meta name="keywords" content="piracy, movies, tv shows, tv shows unblocked, movies unblocked">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Nebula Education">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="color-scheme" content="dark">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nebula Education">
+    <meta property="og:description" content="Play any movie or tv show on Nebula.">
+    <meta property="og:url" content="https://trylearning.space/movie">
+    <meta property="og:image" content="https://trylearning.space/assets/og-image.jpg">
+
+    <meta property="twitter:url" content="https://trylearning.space/movie">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Nebula Education">
+    <meta property="twitter:description" content="Play any movie or tv show on Nebula.">
+    <meta property="twitter:image" content="https://trylearning.space/assets/og-image.jpg">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="canonical" href="https://trylearning.space/movie">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <style>
+        .card-media-wrapper { aspect-ratio: 2/3; } 
+        
+        .tv-controls {
+            display: none;
+            gap: 10px; margin-left: 20px;
+        }
+        .tv-input {
+            background: #222; border: 1px solid #444; color: white;
+            padding: 5px; border-radius: 4px; width: 60px; text-align: center;
+        }
+        .play-btn {
+            background: #6366f1; border: none; color: white;
+            padding: 5px 15px; border-radius: 4px; cursor: pointer;
+        }
+        .play-btn:hover { background: #4f46e5; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="logo">nebula <span style="font-size:0.5em; color:#a855f7;">THEATER</span></a>
+            <div class="nav-links">
+                <a href="/">Back to Games</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container play-container">
+        
+        <div class="controls-bar" data-aos="fade-down">
+            <div class="search-container" style="margin: 0; width: 100%; max-width: 100%;">
+                <input type="text" id="tmdb-search" class="search-input" placeholder="Search Movies & TV Series...">
+            </div>
+        </div>
+
+        <div id="loading" class="loading-spinner">Searching the cosmos...</div>
+
+        <div id="movie-grid" class="game-grid"></div>
+
+    </div>
+
+    <div id="game-view" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999;">
+        
+        <div style="height:50px; background:rgba(0,0,0,0.9); display:flex; align-items:center; padding:0 20px; border-bottom:1px solid #333; gap: 15px;">
+            <button onclick="closePlayer()" style="background:#ef4444; color:white; border:none; padding:8px 15px; cursor:pointer; border-radius:4px; font-weight:bold;">CLOSE</button>
+            <span id="player-title" style="color:white; font-weight:bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 300px;">Title</span>
+
+            <div id="tv-controls" class="tv-controls">
+                <span style="color:#aaa; font-size: 0.8rem; align-self: center;">Season:</span>
+                <input type="number" id="season-input" class="tv-input" min="1" value="1">
+                <span style="color:#aaa; font-size: 0.8rem; align-self: center;">Episode:</span>
+                <input type="number" id="episode-input" class="tv-input" min="1" value="1">
+                <button onclick="updateSource()" class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+        </div>
+
+        <iframe id="video-frame" style="width:100%; height:calc(100% - 50px); border:none;" allowfullscreen></iframe>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/movie-script.js"></script>
+</body>
+</html>
