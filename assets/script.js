@@ -1,12 +1,11 @@
-/*
-    Discord: "fa-brands fa-discord"
-    GitHub: "fa-brands fa-github"
-    Twitter/X: "fa-brands fa-x-twitter"
-    YouTube: "fa-brands fa-youtube"
-    Generic Website: "fa-solid fa-globe"
-    Person/User: "fa-solid fa-user"
-    Game Controller: "fa-solid fa-gamepad"
-*/
+const isChromebook = /CrOS/.test(navigator.userAgent);
+
+const spaceWords = [
+    "Solar", "Lunar", "Nebula", "Orbit", "Gravity", 
+    "Quantum", "Stellar", "Cosmic", "Eclipse", "Horizon", 
+    "Asteroid", "Comet", "Galaxy", "Physics", "Atmosphere"
+];
+
 let stealthTimer;
 const TIMEOUT_MS = 8000;
 
@@ -530,13 +529,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (window.location.pathname.includes('/play')) {
         loadGame();
-    }
-    else {
+    } else {
         setupSecretTrigger();
         renderGameGrid(library);
         setupSearch();
     }
 });
+
 
 function setupSecretTrigger() {
     const logo = document.getElementById('secret-logo');
@@ -558,9 +557,13 @@ function setupSecretTrigger() {
         if (clickCount >= 3) {
             eduView.style.display = 'none';
             gameView.style.display = 'block';
-            
             setTimeout(() => AOS.refresh(), 100);
-            document.title = "Nebula | Simulations Active";
+            
+            if (isChromebook) {
+                document.title = "Nebula | Educational Resources";
+            } else {
+                document.title = "Nebula | Simulations Active";
+            }
 
             initStealthMode();
         }
@@ -569,11 +572,7 @@ function setupSecretTrigger() {
 
 function initStealthMode() {
     const activityEvents = ['mousemove', 'keydown', 'click', 'scroll', 'touchstart'];
-
-    activityEvents.forEach(evt => {
-        window.addEventListener(evt, resetStealthTimer);
-    });
-
+    activityEvents.forEach(evt => window.addEventListener(evt, resetStealthTimer));
     resetStealthTimer();
 }
 
@@ -637,7 +636,8 @@ function renderGameGrid(list, isSubGroup = false) {
             if (item.type === 'group') {
                 renderGameGrid(item.items, true);
             } else {
-                window.location.href = `play?game=${item.id}`;
+                const param = isChromebook ? 'video' : 'game';
+                window.location.href = `play?${param}=${item.id}`;
             }
         };
 
@@ -665,7 +665,6 @@ function setupSearch() {
     
     input.addEventListener('keyup', (e) => {
         const term = e.target.value.toLowerCase();
-
         if (term === '') {
             renderGameGrid(library);
         } else {
@@ -690,15 +689,51 @@ function flattenLibrary(list) {
 
 function loadGame() {
     const params = new URLSearchParams(window.location.search);
-    const gameId = params.get('game');
+    const gameParam = params.get('game');
+    const videoParam = params.get('video');
+    let targetId = null;
+
+    if (isChromebook) {
+        if (gameParam) {
+            const newUrl = new URL(window.location);
+            newUrl.searchParams.delete('game');
+            newUrl.searchParams.set('video', gameParam);
+            window.history.replaceState({}, '', newUrl);
+            
+            targetId = gameParam;
+        } else if (videoParam) {
+            targetId = videoParam;
+        }
+    } 
+    
+    else {
+        if (videoParam) {
+            window.location.href = '/';
+            return;
+        } else if (gameParam) {
+            targetId = gameParam;
+        }
+    }
+
+    if (!targetId) {
+        window.location.href = '/';
+        return;
+    }
 
     const allGames = flattenLibrary(library);
-    const gameData = allGames.find(g => g.id === gameId);
+    const gameData = allGames.find(g => g.id === targetId);
     
     if (gameData) {
-        const gamePath = `games/${gameId}/index.html`;
+        const gamePath = `games/${targetId}/index.html`;
 
-        document.title = `Play ${gameData.title} for Free and Unblocked | Nebula`;
+        if (isChromebook) {
+            const w1 = spaceWords[Math.floor(Math.random() * spaceWords.length)];
+            const w2 = spaceWords[Math.floor(Math.random() * spaceWords.length)];
+            document.title = `Playing ${w1} ${w2} Education Video`;
+        } else {
+            document.title = `Play ${gameData.title} for Free and Unblocked | Nebula`;
+        }
+
         document.getElementById('game-title').innerText = gameData.title;
         document.getElementById('game-frame').src = gamePath;
 
@@ -713,16 +748,14 @@ function loadGame() {
             creatorBtn.style.display = 'inline-flex';
             creatorBtn.href = gameData.creator.link;
             creatorName.innerText = gameData.creator.name;
-            // Set icon class (e.g. "fa-brands fa-github")
             creatorIcon.className = gameData.creator.icon;
         } else {
             creatorBtn.style.display = 'none';
         }
-        // ---------------------------------
 
         updateSEOTags(gameData);
 
-        fetch(`games/${gameId}/description.txt`)
+        fetch(`games/${targetId}/description.txt`)
             .then(res => {
                 if(!res.ok) throw new Error("No description.txt");
                 return res.text();
@@ -739,11 +772,6 @@ function loadGame() {
 
 function updateSEOTags(game) {
     const currentUrl = window.location.href;
-    const imageUrl = /\.(png|jpg|jpeg|gif|webp)$/i.test(game.icon) 
-        ? `${window.location.origin}/games/${game.id}/${game.icon}`
-        : `${window.location.origin}/assets/og-image.jpg`;
-
-    const cleanDesc = stripMarkdown(game.description);
 
     let linkTag = document.querySelector("link[rel='canonical']");
     if (!linkTag) {
@@ -752,6 +780,14 @@ function updateSEOTags(game) {
         document.head.appendChild(linkTag);
     }
     linkTag.setAttribute('href', currentUrl);
+
+    if (isChromebook) return;
+
+    const imageUrl = /\.(png|jpg|jpeg|gif|webp)$/i.test(game.icon) 
+        ? `${window.location.origin}/games/${game.id}/${game.icon}`
+        : `${window.location.origin}/assets/og-image.jpg`;
+
+    const cleanDesc = stripMarkdown(game.description);
 
     document.querySelector('meta[name="description"]').setAttribute("content", `Play ${game.title} unblocked for free with not download. ${cleanDesc}`);
     
@@ -794,12 +830,25 @@ function parseAndDisplayDetails(text) {
 
     if (sections.seo.trim()) {
         const seoText = sections.seo.trim();
+        
         document.getElementById('seo-content').innerText = seoText;
         
         const metaTag = document.querySelector('meta[name="keywords"]');
         if(metaTag) {
-            const existing = metaTag.getAttribute('content');
-            metaTag.setAttribute('content', `${existing}, ${seoText.replace(/\n/g, ', ')}`);
+            if (isChromebook) {
+                return; 
+            }
+
+            let currentKeywords = metaTag.getAttribute('content');
+
+            currentKeywords = currentKeywords
+                .replace(/education|astronomy|physics/gi, "") 
+                .replace(/,\s*,/g, ",") 
+                .replace(/^,\s*|,\s*$/g, "") 
+                .trim();
+            
+            const separator = currentKeywords.length > 0 ? ', ' : '';
+            metaTag.setAttribute('content', `${currentKeywords}${separator}${seoText.replace(/\n/g, ', ')}`);
         }
     }
 }
