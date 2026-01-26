@@ -695,9 +695,6 @@ function renderGameGrid(list, isSubGroup = false) {
         const backCard = document.createElement('div');
         backCard.className = 'game-card back-card';
         backCard.onclick = () => {
-            const cleanUrl = window.location.pathname; 
-            window.history.replaceState({}, '', cleanUrl);
-            
             renderGameGrid(library); 
             document.getElementById('search-input').value = '';
         };
@@ -730,8 +727,15 @@ function renderGameGrid(list, isSubGroup = false) {
             if (item.type === 'group') {
                 renderGameGrid(item.items, true);
             } else {
-                const param = isChromebook ? 'video' : 'game';
-                window.location.href = `play?${param}=${item.id}`; 
+                const overlay = document.getElementById('game-view');
+                const overlayFrame = document.getElementById('game-frame');
+                
+                if (overlay && overlayFrame) {
+                    launchOverlay(item);
+                } else {
+                    const param = isChromebook ? 'video' : 'game';
+                    window.location.href = `play?${param}=${item.id}`;
+                }
             }
         };
 
@@ -752,6 +756,54 @@ function renderGameGrid(list, isSubGroup = false) {
         grid.appendChild(card);
     });
 }
+
+async function launchOverlay(game) {
+    const view = document.getElementById('game-view');
+    const frame = document.getElementById('game-frame');
+    const titleDisp = document.getElementById('game-title-disp');
+
+    if(!view || !frame) return;
+
+    view.style.display = 'block';
+    if(titleDisp) titleDisp.innerText = "Loading " + game.title + "...";
+    
+    const isLocal = window.location.protocol === 'data:' || window.location.protocol === 'file:';
+    const repoBase = isLocal ? "https://cdn.jsdelivr.net/gh/tracerip/nebula@main" : "";
+    
+    const gameFolder = `${repoBase}/games/${game.id}/`;
+    const indexUrl = `${gameFolder}index.html`;
+
+    try {
+        const res = await fetch(indexUrl);
+        if(!res.ok) throw new Error("Game file missing");
+        let html = await res.text();
+
+        if(!html.includes('<base')) {
+            html = html.replace('<head>', `<head><base href="${gameFolder}">`);
+        }
+
+        const blob = new Blob([html], { type: "text/html" });
+        const blobUrl = URL.createObjectURL(blob);
+        
+        frame.src = blobUrl;
+        
+        if(titleDisp) titleDisp.innerText = game.title;
+
+    } catch(e) {
+        if(titleDisp) titleDisp.innerText = "Error";
+        console.error(e);
+        frame.src = indexUrl;
+    }
+}
+
+window.closeOverlay = function() {
+    const view = document.getElementById('game-view');
+    const frame = document.getElementById('game-frame');
+    if(view) view.style.display = 'none';
+    if(frame) {
+        frame.src = 'about:blank';
+    }
+};
 
 function setupSearch() {
     const input = document.getElementById('search-input');
