@@ -820,6 +820,13 @@ function loadGame() {
         const rawBtn = document.getElementById('raw-btn');
         if(rawBtn) rawBtn.href = gamePath;
 
+        if (window.self !== window.top) {
+            rawBtn.onclick = (e) => {
+                e.preventDefault();
+                openCloak(rawBtn.href); 
+            };
+        }
+
         const creatorBtn = document.getElementById('creator-btn');
         const creatorIcon = document.getElementById('creator-icon');
         const creatorName = document.getElementById('creator-name');
