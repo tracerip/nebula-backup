@@ -727,14 +727,12 @@ function renderGameGrid(list, isSubGroup = false) {
             if (item.type === 'group') {
                 renderGameGrid(item.items, true);
             } else {
-                // --- UNIVERSAL ENVIRONMENT DETECTION ---
                 const overlay = document.getElementById('game-view');
+                const overlayFrame = document.getElementById('game-frame');
                 
-                if (overlay) {
-                    // PORTABLE MODE: Overlay exists, use it.
+                if (overlay && overlayFrame) {
                     launchOverlay(item);
                 } else {
-                    // STANDARD MODE: No overlay, navigate to play page.
                     const param = isChromebook ? 'video' : 'game';
                     window.location.href = `play?${param}=${item.id}`;
                 }
