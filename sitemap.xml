@@ -282,4 +282,10 @@
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://trylearning.space/movie</loc>
+        <lastmod>2025-01-26</lastmod>
+        <priority>0.95</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>

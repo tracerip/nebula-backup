@@ -540,6 +540,15 @@ const library = [
     }
 ];
 
+const featuredItem = {
+    id: "movie-theater",
+    title: "Nebula Theater",
+    description: "Watch thousands of movies and TV shows for free directly in your browser. With only a single ad, high speeds, and multiple server sources.",
+    icon: "fa-solid fa-film",
+    link: "/movie", 
+    isExternal: true
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({ duration: 678, once: true, easing: 'ease-out-cubic' });
 
@@ -550,11 +559,14 @@ document.addEventListener('DOMContentLoaded', () => {
         loadGame();
     } else {
         setupSecretTrigger();
+
         sortLibrary(library);
         renderGameGrid(library);
+        
         setupSearch();
     }
 });
+
 
 function setupSecretTrigger() {
     const logo = document.getElementById('secret-logo');
@@ -689,12 +701,36 @@ function lockdownSystem() {
 function renderGameGrid(list, isSubGroup = false) {
     const grid = document.getElementById('game-grid');
     if(!grid) return;
+    
     grid.innerHTML = '';
+
+    if (!isSubGroup && list === library) {
+        const featuredCard = document.createElement('div');
+        featuredCard.className = 'featured-card';
+        featuredCard.setAttribute('data-aos', 'fade-up');
+        
+        featuredCard.onclick = () => {
+            window.location.href = featuredItem.link;
+        };
+
+        featuredCard.innerHTML = `
+            <div class="featured-content">
+                <div class="featured-icon"><i class="${featuredItem.icon}"></i></div>
+                <div class="featured-text">
+                    <h3>${featuredItem.title}</h3>
+                    <p>${featuredItem.description}</p>
+                </div>
+                <div class="featured-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+        `;
+        grid.appendChild(featuredCard);
+    }
 
     if (isSubGroup) {
         const backCard = document.createElement('div');
         backCard.className = 'game-card back-card';
         backCard.onclick = () => {
+            window.history.pushState({}, '', window.location.pathname);
             renderGameGrid(library); 
             document.getElementById('search-input').value = '';
         };
@@ -727,15 +763,8 @@ function renderGameGrid(list, isSubGroup = false) {
             if (item.type === 'group') {
                 renderGameGrid(item.items, true);
             } else {
-                const overlay = document.getElementById('game-view');
-                const overlayFrame = document.getElementById('game-frame');
-                
-                if (overlay && overlayFrame) {
-                    launchOverlay(item);
-                } else {
-                    const param = isChromebook ? 'video' : 'game';
-                    window.location.href = `play?${param}=${item.id}`;
-                }
+                const param = isChromebook ? 'video' : 'game';
+                window.location.href = `play?${param}=${item.id}`;
             }
         };
 
