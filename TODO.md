@@ -1,8 +1,16 @@
-Move all games to github.com/YoureIronic/jsdelivr for caching and no upload to pages limit
+Move all games to jsdelivr for caching and no 1GB github page limit
 
 Current Finished:
 - Buckshot Roulette
 - Burrito Bison
+- FNAF 1
+- FNAF 2
+- FNAF 3
+- FNAF 4
+- FNAF 4 Halloween
+- FNAF PS
+- FNAF UCN
+- FNAF World
 
 Doesnt need to be moved:
 - Block Blast
