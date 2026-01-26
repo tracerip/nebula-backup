@@ -526,6 +526,17 @@ const library = [
             link: "https://github.com/aukak/hollow-knight",
             icon: "fa-brands fa-github"
         }
+    },
+    {
+        id: "buildnow-gg",
+        title: "BuildNow GG",
+        description: "A fast-paced third-person tactical shooter that focuses heavily on building mechanics.",
+        icon: "thumbnail.jpg",
+        creator: {
+            name: "BattleLab",
+            link: "https://www.crazygames.com/game/buildnow-gg",
+            icon: "fa-solid fa-globe"
+        }
     }
 ];
 

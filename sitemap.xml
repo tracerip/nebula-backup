@@ -276,4 +276,10 @@
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://trylearning.space/play?game=buildnow-gg</loc>
+        <lastmod>2025-01-26</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>
