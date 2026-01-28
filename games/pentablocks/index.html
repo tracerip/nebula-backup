@@ -77,10 +77,37 @@ body {
 }
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
-<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+		<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
 	</head>
 	<body>
+        <script type="text/javascript">
+            window.SDK_OPTIONS = {
+                gameId: "9aogv3knwvcc9cm6xs6lk9prepwi1det",
+                onEvent: function (a) {
+                    switch (a.name) {
+                        case "SDK_GAME_PAUSE":
+                            console.log("SDK Requested Pause");
+                            break;
+                        case "SDK_GAME_START":
+                            console.log("SDK Requested Resume");
+                            break;
+                        case "SDK_READY":
+                            console.log("SDK Ready");
+                            if (typeof sdk !== 'undefined' && typeof sdk.showBanner === 'function') {
+                                sdk.showBanner();
+                            }
+                            break;
+                    }
+                }
+            };
+            (function (a, b, c) {
+                var d = a.getElementsByTagName(b)[0];
+                a.getElementById(c) || (a = a.createElement(b), a.id = c,
+                    a.src = "https://api.gamemonetize.com/sdk.js", d.parentNode.insertBefore(a, d))
+            })(document, "script", "gamemonetize-sdk");
+        </script>
+
 		<canvas id="canvas">
 			Your browser does not support the canvas tag.
 		</canvas>
@@ -196,4 +223,3 @@ const engine = new Engine(GODOT_CONFIG);
 		</script>
 	</body>
 </html>
-
