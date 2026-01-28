@@ -446,18 +446,6 @@ const library = [
         }
     },
     { 
-        id: "slope", 
-        title: "Slope", 
-        description: "The ultimate 3D speed run game where you play as a ball dodging red walls going down a slope.", 
-        icon: "thumbnail.jpg",
-        category: "html5",
-        creator: {
-            name: "Y8",
-            link: "https://github.com/reunbozdo/BlockBlast",
-            icon: "fa-brands fa-github"
-        }
-    },
-    { 
         id: "slope-plus", 
         title: "Slope Plus", 
         description: "A modded version of the addictive endless runner [Slope](play?game=slope), packed with extra features like seeded runs for replayable maps, custom games to load maps and set starting speeds.", 
