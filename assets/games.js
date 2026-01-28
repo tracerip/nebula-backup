@@ -333,6 +333,64 @@ const library = [
             }
         ]
     },
+    {
+        type: "group",
+        title: "Bloons Collection",
+        description: "All Bloons versions (1, 2, 3, 4, Player Pack, etc).",
+        icon: "bloons-thumbnail.jpg",
+        category: "flash",
+        items: [
+            {
+                id: "bloons",
+                title: "Bloons",
+                description: "Adjust your aim, set your power, and launch darts through tricky formations of rubber targets. Utilize special balloons like tacks, bombs, and ice to clear the screen in this addictive flash classic.",
+                icon: "thumbnail.png",
+                category: "flash"
+            },
+            {
+                id: "bloons-2",
+                title: "Bloons 2",
+                description: "Travel through different worlds and experiment with new special balloons, including the Reverse Gravity Balloon and the Bee Balloon.",
+                icon: "thumbnail.png",
+                category: "flash"
+            },
+            {
+                id: "bloons-player-pack",
+                title: "Bloons Player Pack 1",
+                description: "Features 50 of the best levels created by the original Bloons community.",
+                icon: "thumbnail.jpg",
+                category: "flash"
+            },
+            {
+                id: "bloons-player-pack-2",
+                title: "Bloons Player Pack 2",
+                description: "This pack is known for its Rube Goldberg style levels, where hitting one balloon triggers a massive chain reaction of tacks and bombs.",
+                icon: "thumbnail.jpg",
+                category: "flash"
+            },
+            {
+                id: "bloons-player-pack-3",
+                title: "Bloons Player Pack 3",
+                description: "Turns up the heat with levels that demand pixel-perfect precision. These stages often feature tight corridors and hidden rubber blocks that require you to find the exact angle to succeed.",
+                icon: "thumbnail.jpg",
+                category: "flash"
+            },
+            {
+                id: "bloons-player-pack-4",
+                title: "Bloons Player Pack 4",
+                description: "Many levels here look like pictures (animals, objects) made of balloons, but don't let the cute looks fool you—they are tricky to clear.",
+                icon: "thumbnail.jpg",
+                category: "flash"
+            },
+            {
+                id: "bloons-player-pack-5",
+                title: "Bloons Player Pack 5",
+                description: "The festive finale to the player pack series. Originally released as a Christmas special, it features holiday-themed designs and some of the most difficult puzzles in the entire franchise.",
+                icon: "thumbnail.jpg",
+                category: "flash"
+            }
+        ]
+    },
     { 
         id: "gta-vc", 
         title: "Grand Theft Auto: Vice City", 
@@ -609,6 +667,18 @@ const library = [
             name: "dinguschan",
             link: "https://github.com/dinguschan-owo/Helios",
             icon: "fa-brands fa-github"
+        }
+    },
+    {
+        id: "tapper",
+        title: "Tapper",
+        description: "The classic arcade test of reflexes and multitasking. You play as a bartender who must frantically serve frothy mugs of root beer to waves of thirsty customers",
+        icon: "thumbnail.png",
+        category: "emulator",
+        creator: {
+            name: "Marvin Glass and Associates",
+            link: "https://en.wikipedia.org/wiki/Marvin_Glass_and_Associates",
+            icon: "fa-solid fa-globe"
         }
     }
 ];
