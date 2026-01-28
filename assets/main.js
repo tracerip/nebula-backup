@@ -183,7 +183,7 @@ function loadGame() {
 
         document.title = isChromebook 
             ? `Playing ${spaceWords[Math.floor(Math.random()*spaceWords.length)]} Video` 
-            : `Play ${gameData.title} Unblocked | Nebula`;
+            : `Play ${gameData.title} Unblocked Online Now Without Downloading`;
 
         document.getElementById('game-title').innerText = gameData.title;
         document.getElementById('game-frame').src = gamePath;
