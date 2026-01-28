@@ -183,7 +183,7 @@ function loadGame() {
 
         document.title = isChromebook 
             ? `Playing ${spaceWords[Math.floor(Math.random()*spaceWords.length)]} Video` 
-            : `Play ${gameData.title} | Nebula`;
+            : `Play ${gameData.title} Unblocked | Nebula`;
 
         document.getElementById('game-title').innerText = gameData.title;
         document.getElementById('game-frame').src = gamePath;
@@ -230,19 +230,19 @@ function updateSEOTags(game) {
     if (isChromebook) return;
 
     const imageUrl = /\.(png|jpg|jpeg|gif|webp)$/i.test(game.icon) 
-        ? `${window.location.origin}/games/${game.id}/${game.icon}`
-        : `${window.location.origin}/assets/og-image.jpg`;
+        ? `${masterDomain}/games/${game.id}/${game.icon}`
+        : `${masterDomain}/assets/og-image.jpg`;
 
     const cleanDesc = stripMarkdown(game.description);
 
     document.querySelector('meta[name="description"]').setAttribute("content", `Play ${game.title} unblocked for free without needing to download. ${cleanDesc}`);
     
-    document.querySelector('meta[property="og:title"]').setAttribute("content", game.title);
+    document.querySelector('meta[property="og:title"]').setAttribute("content", `Play ${game.title} Unblocked | Nebula`);
     document.querySelector('meta[property="og:description"]').setAttribute("content", `Play ${game.title} unblocked for free without needing to download. ${cleanDesc}`);
     document.querySelector('meta[property="og:url"]').setAttribute("content", canonicalUrl);
     document.querySelector('meta[property="og:image"]').setAttribute("content", imageUrl);
     
-    document.querySelector('meta[property="twitter:title"]').setAttribute("content", game.title);
+    document.querySelector('meta[property="twitter:title"]').setAttribute("content", `Play ${game.title} Unblocked | Nebula`);
     document.querySelector('meta[property="twitter:description"]').setAttribute("content", `Play ${game.title} unblocked for free without needing to download. ${cleanDesc}`);
     document.querySelector('meta[property="twitter:image"]').setAttribute("content", imageUrl);
     document.querySelector('meta[property="twitter:url"]').setAttribute("content", canonicalUrl);

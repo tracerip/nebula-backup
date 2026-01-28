@@ -348,4 +348,34 @@
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://trylearning.space/play?game=btd-5</loc>
+        <lastmod>2025-01-28</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=btd-4</loc>
+        <lastmod>2025-01-28</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=btd-3</loc>
+        <lastmod>2025-01-28</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=btd-2</loc>
+        <lastmod>2025-01-28</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=btd</loc>
+        <lastmod>2025-01-28</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>
