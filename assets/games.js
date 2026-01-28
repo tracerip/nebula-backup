@@ -388,6 +388,41 @@ const library = [
                 description: "The festive finale to the player pack series. Originally released as a Christmas special, it features holiday-themed designs and some of the most difficult puzzles in the entire franchise.",
                 icon: "thumbnail.jpg",
                 category: "flash"
+            },
+            {
+                id: "btd",
+                title: "Bloons Tower Defense",
+                description: "Instead of solving puzzles, your goal here is to stop waves of balloons from reaching the end of the track.",
+                icon: "thumbnail.png",
+                category: "flash"
+            },
+            {
+                id: "btd-2",
+                title: "Bloons Tower Defense 2",
+                description: "This sequel introduces the iconic Boomerang Monkey and the road spikes, giving you more ways to handle the tougher balloon waves (including the dreaded Lead Bloons).",
+                icon: "thumbnail.jpg",
+                category: "flash"
+            },
+            {
+                id: "btd-3",
+                title: "Bloons Tower Defense 3",
+                description: "A major leap forward for the series, introducing massive upgrades and new towers like the Spike-o-pult and the Monkey Beacon.",
+                icon: "thumbnail.png",
+                category: "flash"
+            },
+            {
+                id: "btd-4",
+                title: "Bloons TD 4",
+                description: "Overhauled the graphics and gameplay mechanics, introducing the upgrade system we know today. Unlock new towers as you rank up, including the Glue Gunner, Ace, and Mortar, and unleash the devastating Sun God temple.",
+                icon: "thumbnail.png",
+                category: "flash"
+            },
+            {
+                id: "btd-5",
+                title: "Bloons TD 5",
+                description: "Widely considered the peak of the Flash era for the franchise. It features dual upgrade paths for every tower, special agents, daily challenges, and intense boss bloons like the ZOMG.",
+                icon: "thumbnail.jpg",
+                category: "flash"
             }
         ]
     },
