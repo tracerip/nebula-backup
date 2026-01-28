@@ -288,15 +288,63 @@
         <priority>0.95</priority>
         <changefreq>monthly</changefreq>
     </url>
-        <url>
+    <url>
         <loc>https://trylearning.space/play?game=nautilusos</loc>
         <lastmod>2025-01-27</lastmod>
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
-        <url>
+    <url>
         <loc>https://trylearning.space/play?game=helios</loc>
         <lastmod>2025-01-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=tapper</loc>
+        <lastmod>2025-01-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=bloons</loc>
+        <lastmod>2025-01-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=bloons-2</loc>
+        <lastmod>2025-01-27</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=bloons-player-pack</loc>
+        <lastmod>2025-01-28</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=bloons-player-pack-2</loc>
+        <lastmod>2025-01-28</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=bloons-player-pack-3</loc>
+        <lastmod>2025-01-28</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=bloons-player-pack-4</loc>
+        <lastmod>2025-01-28</lastmod>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://trylearning.space/play?game=bloons-player-pack-5</loc>
+        <lastmod>2025-01-28</lastmod>
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
