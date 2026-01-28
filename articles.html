@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | Nebula</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="logo">nebula</a>
+            <div class="nav-links">
+                <a href="articles" style="color: var(--accent);">Articles</a>
+                <a href="research">Research</a>
+                <a href="about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 data-aos="fade-down">Latest <span class="gradient-text">Publications</span></h1>
+            <p data-aos="fade-up">Curated content for astronomy students.</p>
+        </div>
+    </section>
+
+    <section class="container blog-grid">
+        <article class="blog-card" onclick="window.location.href='blog/star-lifecycle'" style="cursor: pointer;" data-aos="fade-up">
+            <h3>The Lifecycle of a Star</h3>
+            <p>Stellar evolution from nebula to remnant.</p>
+            <span class="read-more">Read &rarr;</span>
+        </article>
+        <article class="blog-card" onclick="window.location.href='blog/black-holes'" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="100">
+            <h3>Understanding Black Holes</h3>
+            <p>The physics of the invisible.</p>
+            <span class="read-more">Read &rarr;</span>
+        </article>
+        <article class="blog-card" onclick="window.location.href='blog/mars-rovers'" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="200">
+            <h3>The Mars Rover Missions</h3>
+            <p>Robotic geology on the Red Planet.</p>
+            <span class="read-more">Read &rarr;</span>
+        </article>
+        <article class="blog-card" data-aos="fade-up">
+            <h3>The James Webb Telescope</h3>
+            <p>Looking back in time to the early universe.</p>
+            <span class="read-more">Coming Soon</span>
+        </article>
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Exoplanet Detection</h3>
+            <p>How we find worlds orbiting other stars.</p>
+            <span class="read-more">Coming Soon</span>
+        </article>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

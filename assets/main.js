@@ -4,6 +4,76 @@ let isRecordingKey = false;
 let stealthTimer;
 const TIMEOUT_MS = 8000;
 
+const schoolList = ["deledao", "goguardian", "lightspeed", "linewize", "securly", ".edu/"];
+
+const originalFetch = window.fetch;
+const originalXHROpen = XMLHttpRequest.prototype.open;
+const originalToDataURL = HTMLCanvasElement.prototype.toDataURL;
+
+let fetchProtectionEnabled = localStorage.getItem('nebula_fetch_protection') !== 'false';
+let xhrProtectionEnabled = localStorage.getItem('nebula_xhr_protection') !== 'false';
+let screenshotProtectionEnabled = localStorage.getItem('nebula_screenshot_protection') !== 'false';
+
+function isBlockedDomain(url) {
+    try {
+        const domain = new URL(url, location.origin).hostname + "/";
+        return schoolList.some(school => domain.includes(school));
+    } catch {
+        return false;
+    }
+}
+
+window.fetch = function(url, options) {
+    if (fetchProtectionEnabled && isBlockedDomain(url)) {
+        console.warn('[Nebula] Blocked fetch request to monitoring domain');
+        return Promise.reject(new Error("Blocked by Nebula"));
+    }
+    return originalFetch.apply(this, arguments);
+};
+
+XMLHttpRequest.prototype.open = function(method, url) {
+    if (xhrProtectionEnabled && isBlockedDomain(url)) {
+        console.warn('[Nebula] Blocked XHR request to monitoring domain');
+        return;
+    }
+    return originalXHROpen.apply(this, arguments);
+};
+
+HTMLCanvasElement.prototype.toDataURL = function(...args) {
+    if (screenshotProtectionEnabled) {
+        return "";
+    }
+    return originalToDataURL.apply(this, args);
+};
+
+function toggleFetchProtection() {
+    fetchProtectionEnabled = !fetchProtectionEnabled;
+    localStorage.setItem('nebula_fetch_protection', fetchProtectionEnabled);
+    updateProtectionDisplays();
+}
+
+function toggleXHRProtection() {
+    xhrProtectionEnabled = !xhrProtectionEnabled;
+    localStorage.setItem('nebula_xhr_protection', xhrProtectionEnabled);
+    updateProtectionDisplays();
+}
+
+function toggleScreenshotProtection() {
+    screenshotProtectionEnabled = !screenshotProtectionEnabled;
+    localStorage.setItem('nebula_screenshot_protection', screenshotProtectionEnabled);
+    updateProtectionDisplays();
+}
+
+function updateProtectionDisplays() {
+    const fetchToggle = document.getElementById('fetch-toggle');
+    const xhrToggle = document.getElementById('xhr-toggle');
+    const screenshotToggle = document.getElementById('screenshot-toggle');
+    
+    if (fetchToggle) fetchToggle.checked = fetchProtectionEnabled;
+    if (xhrToggle) xhrToggle.checked = xhrProtectionEnabled;
+    if (screenshotToggle) screenshotToggle.checked = screenshotProtectionEnabled;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({ duration: 678, once: true, easing: 'ease-out-cubic' });
 
@@ -20,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setupSearch();
 
         if (document.getElementById('key-display')) updateKeyDisplay();
+        updateProtectionDisplays();
     }
 });
 
@@ -108,6 +179,7 @@ function switchToGames() {
 function switchToSettings() {
     document.getElementById('game-view').style.display = 'none';
     document.getElementById('settings-view').style.display = 'block';
+    updateProtectionDisplays();
     setTimeout(() => AOS.refresh(), 100);
 }
 
@@ -183,7 +255,7 @@ function loadGame() {
 
         document.title = isChromebook 
             ? `Playing ${spaceWords[Math.floor(Math.random()*spaceWords.length)]} Video` 
-            : `Play ${gameData.title} Unblocked | Nebula`;
+            : `Play ${gameData.title} Unblocked Online Now Without Downloading`;
 
         document.getElementById('game-title').innerText = gameData.title;
         document.getElementById('game-frame').src = gamePath;
